@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/CMakeFiles/bootloader
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/CMakeFiles/bootloader.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/CMakeFiles/bootloader-complete.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

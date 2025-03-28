@@ -1,0 +1,355 @@
+RON),boot:0x18 (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x40855ab0,len:0x16dc
+load:0x4084c7a0,len:0xce4
+load:0�ESP-ROM:esp32c5-eco1-20240726
+Build:Jul 26 2024
+rst:0x1 (POWERON),boot:0x18 (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x40855ab0,len:0x16dc
+load:0x4084c7a0,len:0xce4
+load:0x4084e9a0,len:0x2fa8
+entry 0x4084c7aa
+[0;32mI (23) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Mar 23 2025 07:41:14[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.1[0m
+[0;32mI (27) boot.esp32c5: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c5: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c5: SPI Flash Size : 2MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (71) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42080020 size=15db8h ( 89528) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00025de0 vaddr=40800000 size=0a238h ( 41528) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=766d0h (485072) map[0m
+[0;32mI (192) esp_image: segment 3: paddr=000a66f8 vaddr=4080a238 size=0765ch ( 30300) load[0m
+[0;32mI (199) esp_image: segment 4: paddr=000add5c vaddr=40811900 size=03c8ch ( 15500) load[0m
+[0;32mI (207) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (207) boot: Disabling RNG early entropy source...[0m
+[0;32mI (218) cpu_start: Unicore app[0m
+[0;33mW (226) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (231) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     espnow_example[0m
+[0;32mI (236) app_init: App version:      1[0m
+[0;32mI (239) app_init: Compile time:     Mar 23 2025 07:39:45[0m
+[0;32mI (245) app_init: ELF file SHA256:  afe4c8a65...[0m
+[0;32mI (249) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (253) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (256) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (260) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (264) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (270) heap_init: At 4081A400 len 000425A0 (265 KiB): RAM[0m
+[0;32mI (276) heap_init: At 4085C9A0 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (281) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (287) spi_flash: detected chip: generic[0m
+[0;32mI (290) spi_flash: flash io: dio[0m
+[0;33mW (293) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (305) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (311) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (318) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (336) coexist: coexist rom version 78e5c6e42[0m
+[0;32mI (337) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) pp: pp rom version: db0b5b108[0m
+[0;32mI (337) net80211: net80211 rom version: db0b5b108[0m
+[0;32mI (347) wifi:wifi driver task: 40820cc0, prio:23, stack:6656, core=0[0m
+[0;32mI (347) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (347) wifi:wifi certification version: v7.0[0m
+[0;32mI (357) wifi:config NVS flash: enabled[0m
+[0;32mI (357) wifi:config nano formatting: disabled[0m
+[0;32mI (357) wifi:mac_version:HAL_MAC_ESP32AX_752MP,ut_version:N, band mode:0x3[0m
+[0;32mI (367) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (377) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (377) wifi:Init management short buffer num: 32[0m
+[0;32mI (377) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (387) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (387) wifi:Init static rx buffer size: 1700 (rxctrl:64, csi:512)[0m
+[0;32mI (397) wifi:Init static rx buffer num: 10[0m
+[0;32mI (397) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (407) wifi_init: rx ba win: 6[0m
+[0;32mI (407) wifi_init: accept mbox: 6[0m
+[0;32mI (407) wifi_init: tcpip mbox: 32[0m
+[0;32mI (407) wifi_init: udp mbox: 6[0m
+[0;32mI (417) wifi_init: tcp mbox: 6[0m
+[0;32mI (417) wifi_init: tcp tx win: 5760[0m
+[0;32mI (417) wifi_init: tcp rx win: 5760[0m
+[0;32mI (427) wifi_init: tcp mss: 1440[0m
+[0;32mI (427) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (427) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (437) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (437) phy_init: phy_version 102,d3f1369,Oct 17 2024,15:25:12[0m
+[1;31mE (1227) wifi:failed to post WiFi event=43 ret=259[0m
+[0;33mW (1227) wifi:WDEV_RXCCK_DELAY:952[0m
+[0;33mW (1227) wifi:WDEV_RXOFDM_DELAY:240[0m
+[0;33mW (1227) wifi:WDEV_RX_11G_OFDM_DELAY:234[0m
+[0;33mW (1227) wifi:WDEV_TXCCK_DELAY:630[0m
+[0;33mW (1237) wifi:WDEV_TXOFDM_DELAY:94[0m
+[0;33mW (1237) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1247) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1257) wifi:WDEVBEAMFORMCONF:0x21d7120, HE_BF_RPT_RA_SET_OPT:1[0m
+[0;33mW (1257) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (1267) wifi:MODEM_SYSCON_WIFI_BB_CFG_REG(0x600a9c18):0x10003806[0m
+[0;33mW (1277) wifi:(phy)rate:0x0(  LP-1Mbps), pwr:20, txing:20[0m
+[0;33mW (1277) wifi:(phy)rate:0x1(  LP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1287) wifi:(phy)rate:0x2(LP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1287) wifi:(phy)rate:0x3( LP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1297) wifi:(phy)rate:0x5(  SP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1297) wifi:(phy)rate:0x6(SP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1307) wifi:(phy)rate:0x7( SP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1307) wifi:(phy)rate:0x8(    48Mbps), pwr:18, txing:18[0m
+[0;33mW (1317) wifi:(phy)rate:0x9(    24Mbps), pwr:19, txing:19[0m
+[0;33mW (1317) wifi:(phy)rate:0xa(    12Mbps), pwr:18, txing:18[0m
+[0;33mW (1327) wifi:(phy)rate:0xb(     6Mbps), pwr:18, txing:18[0m
+[0;33mW (1327) wifi:(phy)rate:0xc(    54Mbps), pwr:18, txing:18[0m
+[0;33mW (1337) wifi:(phy)rate:0xd(    36Mbps), pwr:19, txing:19[0m
+[0;33mW (1337) wifi:(phy)rate:0xe(    18Mbps), pwr:18, txing:18[0m
+[0;33mW (1347) wifi:(phy)rate:0xf(     9Mbps), pwr:18, txing:18[0m
+[0;33mW (1347) wifi:(phy)rate:0x10, mcs:0x0, pwr(bw20:18, bw40:17), txing:18[0m
+[0;33mW (1357) wifi:(phy)rate:0x11, mcs:0x1, pwr(bw20:18, bw40:17), txing:18[0m
+[0;33mW (1367) wifi:(phy)rate:0x12, mcs:0x2, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1367) wifi:(phy)rate:0x13, mcs:0x3, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1377) wifi:(phy)rate:0x14, mcs:0x4, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1377) wifi:(phy)rate:0x15, mcs:0x5, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1387) wifi:(phy)rate:0x16, mcs:0x6, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1397) wifi:(phy)rate:0x17, mcs:0x7, pwr(bw20:17, bw40:16), txing:17[0m
+[0;33mW (1397) wifi:(phy)rate:0x18, mcs:0x8, pwr(bw20:16, bw40:0), txing:16[0m
+[0;33mW (1407) wifi:(phy)rate:0x19, mcs:0x9, pwr(bw20:15, bw40:0), txing:15[0m
+[0;33mW (1417) wifi:(hal)co_hosted_bss:0, max_indicator:0, bitmask:0xff, mBSSIDsEnable:0[0m
+[0;32mI (1417) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1427) wifi:mode : softAP (60:55:f9:fc:c5:25)[0m
+[0;32mI (1437) wifi:Total power save buffer number: 16[0m
+[0;32mI (1437) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1437) wifi:Init max length of beacon: 752/752[0m
+[1;31mE (1447) wifi:failed to post WiFi event=12 ret=259[0m
+[0;32mI (1447) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (1457) csi: Send hello[0m
+[0;32mI (1557) csi: Send hello[0m
+[0;32mI (1657) csi: Send hello[0m
+[0;32mI (1757) csi: Send hello[0m
+[0;32mI (1857) csi: Send hello[0m
+[0;32mI (1957) csi: Send hello[0m
+[0;32mI (2057) csi: Send hello[0m
+[0;32mI (2157) csi: Send hello[0m
+[0;32mI (2257) csi: Send hello[0m
+[0;32mI (2357) csi: Send hello[0m
+[0;32mI (2457) csi: Send hello[0m
+[0;32mI (2557) csi: Send hello[0m
+[0;32mI (2657) csi: Send hello[0m
+[0;32mI (2757) csi: Send hello[0m
+[0;32mI (2857) csi: Send hello[0m
+[0;32mI (2957) csi: Send hello[0m
+[0;32mI (3057) csi: Send hello[0m
+[0;32mI (3157) csi: Send hello[0m
+[0;32mI (3257) csi: Send hello[0m
+[0;32mI (3357) csi: Send hello[0m
+[0;32mI (3457) csi: Send hello[0m
+[0;32mI (3557) csi: Send hello[0m
+[0;32mI (3657) csi: Send hello[0m
+[0;32mI (3757) csi: Send hello[0m
+[0;32mI (3857) csi: Send hello[0m
+[0;32mI (3957) csi: Send hello[0m
+[0;32mI (4057) csi: Send hello[0m
+[0;32mI (4157) csi: Send hello[0m
+[0;32mI (4257) csi: Send hello[0m
+[0;32mI (4357) csi: Send hello[0m
+[0;32mI (4457) csi: Send hello[0m
+[0;32mI (4557) csi: Send hello[0m
+[0;32mI (4657) csi: Send hello[0m
+[0;32mI (4757) csi: Send hello[0m
+[0;32mI (4857) csi: Send hello[0m
+[0;32mI (4957) csi: Send hello[0m
+[0;32mI (5057) csi: Send hello[0m
+[0;32mI (5157) csi: Send hello[0m
+[0;32mI (5257) csi: Send hello[0m
+[0;32mI (5357) csi: Send hello[0m
+[0;32mI (5457) csi: Send hello[0m
+[0;32mI (5557) csi: Send hello[0m
+[0;32mI (5657) csi: Send hello[0m
+[0;32mI (5757) csi: Send hello[0m
+[0;32mI (5857) csi: Send hello[0m
+[0;32mI (5957) csi: Send hello[0m
+[0;32mI (6057) csi: Send hello[0m
+[0;32mI (6157) csi: Send hello[0m
+[0;32mI (6257) csi: Send hello[0m
+[0;32mI (6357) csi: Send hello[0m
+[0;32mI (6457) csi: Send hello[0m
+[0;32mI (6557) csi: Send hello[0m
+[0;32mI (6657) csi: Send hello[0m
+[0;32mI (6757) csi: Send hello[0m
+[0;32mI (6857) csi: Send hello[0m
+[0;32mI (6957) csi: Send hello[0m
+[0;32mI (7057) csi: Send hello[0m
+[0;32mI (7157) csi: Send hello[0m
+[0;32mI (7257) csi: Send hello[0m
+[0;32mI (7357) csi: Send hello[0m
+[0;32mI (7457) csi: Send hello[0m
+[0;32mI (7557) csi: Send hello[0m
+[0;32mI (7657) csi: Send hello[0m
+[0;32mI (7757) csi: Send hello[0m
+[0;32mI (7857) csi: Send hello[0m
+[0;32mI (7957) csi: Send hello[0m
+[0;32mI (8057) csi: Send hello[0m
+[0;32mI (8157) csi: Send hello[0m
+[0;32mI (8257) csi: Send hello[0m
+[0;32mI (8357) csi: Send hello[0m
+[0;32mI (8457) csi: Send hello[0m
+[0;32mI (8557) csi: Send hello[0m
+[0;32mI (8657) csi: Send hello[0m
+[0;32mI (8757) csi: Send hello[0m
+[0;32mI (8857) csi: Send hello[0m
+[0;32mI (8957) csi: Send hello[0m
+[0;32mI (9057) csi: Send hello[0m
+[0;32mI (9157) csi: Send hello[0m
+[0;32mI (9257) csi: Send hello[0m
+[0;32mI (9357) csi: Send hello[0m
+[0;32mI (9457) csi: Send hello[0m
+[0;32mI (9557) csi: Send hello[0m
+[0;32mI (9657) csi: Send hello[0m
+[0;32mI (9757) csi: Send hello[0m
+[0;32mI (9857) csi: Send hello[0m
+[0;32mI (9957) csi: Send hello[0m
+[0;32mI (10057) csi: Send hello[0m
+[0;32mI (10157) csi: Send hello[0m
+[0;32mI (10257) csi: Send hello[0m
+[0;32mI (10357) csi: Send hello[0m
+[0;32mI (10457) csi: Send hello[0m
+[0;32mI (10557) csi: Send hello[0m
+[0;32mI (10657) csi: Send hello[0m
+[0;32mI (10757) csi: Send hello[0m
+[0;32mI (10857) csi: Send hello[0m
+[0;32mI (10957) csi: Send hello[0m
+[0;32mI (11057) csi: Send hello[0m
+[0;32mI (11157) csi: Send hello[0m
+[0;32mI (11257) csi: Send hello[0m
+[0;32mI (11357) csi: Send hello[0m
+[0;32mI (11457) csi: Send hello[0m
+[0;32mI (11557) csi: Send hello[0m
+[0;32mI (11657) csi: Send hello[0m
+[0;32mI (11757) csi: Send hello[0m
+[0;32mI (11857) csi: Send hello[0m
+[0;32mI (11957) csi: Send hello[0m
+[0;32mI (12057) csi: Send hello[0m
+[0;32mI (12157) csi: Send hello[0m
+[0;32mI (12257) csi: Send hello[0m
+[0;32mI (12357) csi: Send hello[0m
+[0;32mI (12457) csi: Send hello[0m
+[0;32mI (12557) csi: Send hello[0m
+[0;32mI (12657) csi: Send hello[0m
+[0;32mI (12757) csi: Send hello[0m
+[0;32mI (12857) csi: Send hello[0m
+[0;32mI (12957) csi: Send hello[0m
+[0;32mI (13057) csi: Send hello[0m
+[0;32mI (13157) csi: Send hello[0m
+[0;32mI (13257) csi: Send hello[0m
+[0;32mI (13357) csi: Send hello[0m
+[0;32mI (13457) csi: Send hello[0m
+[0;32mI (13557) csi: Send hello[0m
+[0;32mI (13657) csi: Send hello[0m
+[0;32mI (13757) csi: Send hello[0m
+[0;32mI (13857) csi: Send hello[0m
+[0;32mI (13957) csi: Send hello[0m
+[0;32mI (14057) csi: Send hello[0m
+[0;32mI (14157) csi: Send hello[0m
+[0;32mI (14257) csi: Send hello[0m
+[0;32mI (14357) csi: Send hello[0m
+[0;32mI (14457) csi: Send hello[0m
+[0;32mI (14557) csi: Send hello[0m
+[0;32mI (14657) csi: Send hello[0m
+[0;32mI (14757) csi: Send hello[0m
+[0;32mI (14857) csi: Send hello[0m
+[0;32mI (14957) csi: Send hello[0m
+[0;32mI (15057) csi: Send hello[0m
+[0;32mI (15157) csi: Send hello[0m
+[0;32mI (15257) csi: Send hello[0m
+[0;32mI (15357) csi: Send hello[0m
+[0;32mI (15457) csi: Send hello[0m
+[0;32mI (15557) csi: Send hello[0m
+[0;32mI (15657) csi: Send hello[0m
+[0;32mI (15757) csi: Send hello[0m
+[0;32mI (15857) csi: Send hello[0m
+[0;32mI (15957) csi: Send hello[0m
+[0;32mI (16057) csi: Send hello[0m
+[0;32mI (16157) csi: Send hello[0m
+[0;32mI (16257) csi: Send hello[0m
+[0;32mI (16357) csi: Send hello[0m
+[0;32mI (16457) csi: Send hello[0m
+[0;32mI (16557) csi: Send hello[0m
+[0;32mI (16657) csi: Send hello[0m
+[0;32mI (16757) csi: Send hello[0m
+[0;32mI (16857) csi: Send hello[0m
+[0;32mI (16957) csi: Send hello[0m
+[0;32mI (17057) csi: Send hello[0m
+[0;32mI (17157) csi: Send hello[0m
+[0;32mI (17257) csi: Send hello[0m
+[0;32mI (17357) csi: Send hello[0m
+[0;32mI (17457) csi: Send hello[0m
+[0;32mI (17557) csi: Send hello[0m
+[0;32mI (17657) csi: Send hello[0m
+[0;32mI (17757) csi: Send hello[0m
+[0;32mI (17857) csi: Send hello[0m
+[0;32mI (17957) csi: Send hello[0m
+[0;32mI (18057) csi: Send hello[0m
+[0;32mI (18157) csi: Send hello[0m
+[0;32mI (18257) csi: Send hello[0m
+[0;32mI (18357) csi: Send hello[0m
+[0;32mI (18457) csi: Send hello[0m
+[0;32mI (18557) csi: Send hello[0m
+[0;32mI (18657) csi: Send hello[0m
+[0;32mI (18757) csi: Send hello[0m
+[0;32mI (18857) csi: Send hello[0m
+[0;32mI (18957) csi: Send hello[0m
+[0;32mI (19057) csi: Send hello[0m
+[0;32mI (19157) csi: Send hello[0m
+[0;32mI (19257) csi: Send hello[0m
+[0;32mI (19357) csi: Send hello[0m
+[0;32mI (19457) csi: Send hello[0m
+[0;32mI (19557) csi: Send hello[0m
+[0;32mI (19657) csi: Send hello[0m
+[0;32mI (19757) csi: Send hello[0m
+[0;32mI (19857) csi: Send hello[0m
+[0;32mI (19957) csi: Send hello[0m
+[0;32mI (20057) csi: Send hello[0m
+[0;32mI (20157) csi: Send hello[0m
+[0;32mI (20257) csi: Send hello[0m
+[0;32mI (20357) csi: Send hello[0m
+[0;32mI (20457) csi: Send hello[0m
+[0;32mI (20557) csi: Send hello[0m
+[0;32mI (20657) csi: Send hello[0m
+[0;32mI (20757) csi: Send hello[0m
+[0;32mI (20857) csi: Send hello[0m
+[0;32mI (20957) csi: Send hello[0m
+[0;32mI (21057) csi: Send hello[0m
+[0;32mI (21157) csi: Send hello[0m
+[0;32mI (21257) csi: Send hello[0m
+[0;32mI (21357) csi: Send hello[0m
+[0;32mI (21457) csi: Send hello[0m
+[0;32mI (21557) csi: Send hello[0m
+[0;32mI (21657) csi: Send hello[0m
+[0;32mI (21757) csi: Send hello[0m
+[0;32mI (21857) csi: Send hello[0m
+[0;32mI (21957) csi: Send hello[0m
+[0;32mI (22057) csi: Send hello[0m
+[0;32mI (22157) csi: Send hello[0m
+[0;32mI (22257) csi: Send hello[0m
+[0;32mI (22357) csi: Send hello[0m
+[0;32mI (22457) csi: Send hello[0m
+[0;32mI (22557) csi: Send hello[0m
+[0;32mI (22657) csi: Send hello[0m
+[0;32mI (22757) csi: Send hello[0m
+[0;32mI (22857) csi: Send hello[0m
+[0;32mI (22957) csi: Send hello[0m
+[0;32mI (23057) csi: Send hello[0m
+[0;32mI (23157) csi: Send hello[0m
+[0;32mI (23257) csi: Send hello[0m
+[0;32mI (23357) csi: Send hello[0m
+[0;32mI (23457) csi: Send hello[0m
+[0;32mI (23557) csi: Send hello[0m
+[0;32mI (23657) csi: Send hello[0m

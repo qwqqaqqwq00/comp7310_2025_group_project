@@ -1,0 +1,54 @@
+-- IDF_TARGET is not set, guessed 'esp32c5' from sdkconfig 'E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/sdkconfig'
+-- Found Git: E:/Application/Espressif/tools/idf-git/2.44.0/cmd/git.exe (found version "2.44.0.windows.1")
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: E:/Application/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/Application/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/Application/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32c5
+NOTICE: Processing 1 dependencies:
+NOTICE: [1/1] idf (5.4.0)
+-- Project sdkconfig file E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/sdkconfig
+Loading defaults file E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/sdkconfig.defaults...
+-- Adding linker script E:/Application/ESP-IDF/components/riscv/ld/rom.api.ld
+-- Found Python3: E:/Application/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe (found version "3.11.2") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "csi_recv" version: 1
+-- Adding linker script E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.api.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.rvfp.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.wdt.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.systimer.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.version.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.phy.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.coexist.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.net80211.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.pp.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.newlib.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.newlib-normal.ld
+-- Adding linker script E:/Application/ESP-IDF/components/esp_rom/esp32c5/ld/esp32c5.rom.heap.ld
+-- Adding linker script E:/Application/ESP-IDF/components/soc/esp32c5/ld/esp32c5.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv rt sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: E:/Application/ESP-IDF/components/app_trace E:/Application/ESP-IDF/components/app_update E:/Application/ESP-IDF/components/bootloader E:/Application/ESP-IDF/components/bootloader_support E:/Application/ESP-IDF/components/bt E:/Application/ESP-IDF/components/cmock E:/Application/ESP-IDF/components/console E:/Application/ESP-IDF/components/cxx E:/Application/ESP-IDF/components/driver E:/Application/ESP-IDF/components/efuse E:/Application/ESP-IDF/components/esp-tls E:/Application/ESP-IDF/components/esp_adc E:/Application/ESP-IDF/components/esp_app_format E:/Application/ESP-IDF/components/esp_bootloader_format E:/Application/ESP-IDF/components/esp_coex E:/Application/ESP-IDF/components/esp_common E:/Application/ESP-IDF/components/esp_driver_ana_cmpr E:/Application/ESP-IDF/components/esp_driver_cam E:/Application/ESP-IDF/components/esp_driver_dac E:/Application/ESP-IDF/components/esp_driver_gpio E:/Application/ESP-IDF/components/esp_driver_gptimer E:/Application/ESP-IDF/components/esp_driver_i2c E:/Application/ESP-IDF/components/esp_driver_i2s E:/Application/ESP-IDF/components/esp_driver_isp E:/Application/ESP-IDF/components/esp_driver_jpeg E:/Application/ESP-IDF/components/esp_driver_ledc E:/Application/ESP-IDF/components/esp_driver_mcpwm E:/Application/ESP-IDF/components/esp_driver_parlio E:/Application/ESP-IDF/components/esp_driver_pcnt E:/Application/ESP-IDF/components/esp_driver_ppa E:/Application/ESP-IDF/components/esp_driver_rmt E:/Application/ESP-IDF/components/esp_driver_sdio E:/Application/ESP-IDF/components/esp_driver_sdm E:/Application/ESP-IDF/components/esp_driver_sdmmc E:/Application/ESP-IDF/components/esp_driver_sdspi E:/Application/ESP-IDF/components/esp_driver_spi E:/Application/ESP-IDF/components/esp_driver_touch_sens E:/Application/ESP-IDF/components/esp_driver_tsens E:/Application/ESP-IDF/components/esp_driver_uart E:/Application/ESP-IDF/components/esp_driver_usb_serial_jtag E:/Application/ESP-IDF/components/esp_eth E:/Application/ESP-IDF/components/esp_event E:/Application/ESP-IDF/components/esp_gdbstub E:/Application/ESP-IDF/components/esp_hid E:/Application/ESP-IDF/components/esp_http_client E:/Application/ESP-IDF/components/esp_http_server E:/Application/ESP-IDF/components/esp_https_ota E:/Application/ESP-IDF/components/esp_https_server E:/Application/ESP-IDF/components/esp_hw_support E:/Application/ESP-IDF/components/esp_lcd E:/Application/ESP-IDF/components/esp_local_ctrl E:/Application/ESP-IDF/components/esp_mm E:/Application/ESP-IDF/components/esp_netif E:/Application/ESP-IDF/components/esp_netif_stack E:/Application/ESP-IDF/components/esp_partition E:/Application/ESP-IDF/components/esp_phy E:/Application/ESP-IDF/components/esp_pm E:/Application/ESP-IDF/components/esp_psram E:/Application/ESP-IDF/components/esp_ringbuf E:/Application/ESP-IDF/components/esp_rom E:/Application/ESP-IDF/components/esp_security E:/Application/ESP-IDF/components/esp_system E:/Application/ESP-IDF/components/esp_timer E:/Application/ESP-IDF/components/esp_vfs_console E:/Application/ESP-IDF/components/esp_wifi E:/Application/ESP-IDF/components/espcoredump E:/Application/ESP-IDF/components/esptool_py E:/Application/ESP-IDF/components/fatfs E:/Application/ESP-IDF/components/freertos E:/Application/ESP-IDF/components/hal E:/Application/ESP-IDF/components/heap E:/Application/ESP-IDF/components/http_parser E:/Application/ESP-IDF/components/idf_test E:/Application/ESP-IDF/components/ieee802154 E:/Application/ESP-IDF/components/json E:/Application/ESP-IDF/components/log E:/Application/ESP-IDF/components/lwip E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main E:/Application/ESP-IDF/components/mbedtls E:/Application/ESP-IDF/components/mqtt E:/Application/ESP-IDF/components/newlib E:/Application/ESP-IDF/components/nvs_flash E:/Application/ESP-IDF/components/nvs_sec_provider E:/Application/ESP-IDF/components/openthread E:/Application/ESP-IDF/components/partition_table E:/Application/ESP-IDF/components/protobuf-c E:/Application/ESP-IDF/components/protocomm E:/Application/ESP-IDF/components/pthread E:/Application/ESP-IDF/components/riscv E:/Application/ESP-IDF/components/rt E:/Application/ESP-IDF/components/sdmmc E:/Application/ESP-IDF/components/soc E:/Application/ESP-IDF/components/spi_flash E:/Application/ESP-IDF/components/spiffs E:/Application/ESP-IDF/components/tcp_transport E:/Application/ESP-IDF/components/ulp E:/Application/ESP-IDF/components/unity E:/Application/ESP-IDF/components/usb E:/Application/ESP-IDF/components/vfs E:/Application/ESP-IDF/components/wear_levelling E:/Application/ESP-IDF/components/wifi_provisioning E:/Application/ESP-IDF/components/wpa_supplicant
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Configuring done (23.8s)
+-- Generating done (2.7s)
+-- Build files have been written to: E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build

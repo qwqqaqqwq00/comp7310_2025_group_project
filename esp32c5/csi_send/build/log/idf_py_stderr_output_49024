@@ -1,0 +1,42 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x42007b28: uart_ll_get_txfifo_len at E:/Application/ESP-IDF/components/hal/esp32c5/include/hal/uart_ll.h:627 (discriminator 2)
+ (inlined by) uart_tx_char at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:170 (discriminator 2)
+0x42008c3e: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:215 (discriminator 2)
+[0m
+[0;33m--- 0x400253de: realloc in ROM
+[0m
+[0;33m--- 0x42008bca: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:207
+[0m
+[0;33m--- 0x4205ecb4: lwip_read at E:/Application/ESP-IDF/components/lwip/lwip/src/api/sockets.c:1298
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- 0x42007b18: uart_ll_get_txfifo_len at E:/Application/ESP-IDF/components/hal/esp32c5/include/hal/uart_ll.h:627
+ (inlined by) uart_tx_char at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:170
+0x42008c3e: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:215 (discriminator 2)
+[0m
+[0;33m--- 0x400253de: realloc in ROM
+[0m
+[0;33m--- 0x42008bca: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:207
+[0m
+[0;33m--- 0x4205ecb4: lwip_read at E:/Application/ESP-IDF/components/lwip/lwip/src/api/sockets.c:1298
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- 0x42007b08: uart_ll_get_txfifo_len at E:/Application/ESP-IDF/components/hal/esp32c5/include/hal/uart_ll.h:626
+ (inlined by) uart_tx_char at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:170
+0x42008c3e: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:215 (discriminator 2)
+[0m
+[0;33m--- 0x400253de: realloc in ROM
+[0m
+[0;33m--- 0x42008bca: uart_write at E:/Application/ESP-IDF/components/esp_driver_uart/src/uart_vfs.c:207
+[0m
+[0;33m--- 0x4205ecb4: lwip_read at E:/Application/ESP-IDF/components/lwip/lwip/src/api/sockets.c:1298
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0m

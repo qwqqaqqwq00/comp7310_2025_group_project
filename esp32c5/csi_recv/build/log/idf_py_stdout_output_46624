@@ -1,0 +1,103 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\_MyWork\2025-2025\hku\COMP7310-AIoT\comp7310_2025_group_project\esp32c5\csi_recv\build\bootloader\esp-idf\esptool_py && E:\Application\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/Application/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x2000 E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/bootloader/bootloader.bin"
+Bootloader binary size 0x53c0 bytes. 0xc40 bytes (13%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj 
+ccache E:\Application\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.4-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IE:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/config -IE:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main -IE:/Application/ESP-IDF/components/newlib/platform_include -IE:/Application/ESP-IDF/components/freertos/config/include -IE:/Application/ESP-IDF/components/freertos/config/include/freertos -IE:/Application/ESP-IDF/components/freertos/config/riscv/include -IE:/Application/ESP-IDF/components/freertos/FreeRTOS-Kernel/include -IE:/Application/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/include -IE:/Application/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -IE:/Application/ESP-IDF/components/freertos/esp_additions/include -IE:/Application/ESP-IDF/components/esp_hw_support/include -IE:/Application/ESP-IDF/components/esp_hw_support/include/soc -IE:/Application/ESP-IDF/components/esp_hw_support/include/soc/esp32c5 -IE:/Application/ESP-IDF/components/esp_hw_support/dma/include -IE:/Application/ESP-IDF/components/esp_hw_support/ldo/include -IE:/Application/ESP-IDF/components/esp_hw_support/debug_probe/include -IE:/Application/ESP-IDF/components/esp_hw_support/port/esp32c5/. -IE:/Application/ESP-IDF/components/esp_hw_support/port/esp32c5/include -IE:/Application/ESP-IDF/components/esp_hw_support/port/esp32c5/private_include -IE:/Application/ESP-IDF/components/heap/include -IE:/Application/ESP-IDF/components/heap/tlsf -IE:/Application/ESP-IDF/components/log/include -IE:/Application/ESP-IDF/components/soc/include -IE:/Application/ESP-IDF/components/soc/esp32c5 -IE:/Application/ESP-IDF/components/soc/esp32c5/include -IE:/Application/ESP-IDF/components/soc/esp32c5/register -IE:/Application/ESP-IDF/components/hal/platform_port/include -IE:/Application/ESP-IDF/components/hal/esp32c5/include -IE:/Application/ESP-IDF/components/hal/include -IE:/Application/ESP-IDF/components/esp_rom/include -IE:/Application/ESP-IDF/components/esp_rom/esp32c5/include -IE:/Application/ESP-IDF/components/esp_rom/esp32c5/include/esp32c5 -IE:/Application/ESP-IDF/components/esp_rom/esp32c5 -IE:/Application/ESP-IDF/components/esp_common/include -IE:/Application/ESP-IDF/components/esp_system/include -IE:/Application/ESP-IDF/components/esp_system/port/soc -IE:/Application/ESP-IDF/components/esp_system/port/include/riscv -IE:/Application/ESP-IDF/components/esp_system/port/include/private -IE:/Application/ESP-IDF/components/riscv/include -IE:/Application/ESP-IDF/components/lwip/include -IE:/Application/ESP-IDF/components/lwip/include/apps -IE:/Application/ESP-IDF/components/lwip/include/apps/sntp -IE:/Application/ESP-IDF/components/lwip/lwip/src/include -IE:/Application/ESP-IDF/components/lwip/port/include -IE:/Application/ESP-IDF/components/lwip/port/freertos/include -IE:/Application/ESP-IDF/components/lwip/port/esp32xx/include -IE:/Application/ESP-IDF/components/lwip/port/esp32xx/include/arch -IE:/Application/ESP-IDF/components/lwip/port/esp32xx/include/sys -IE:/Application/ESP-IDF/components/esp_wifi/include -IE:/Application/ESP-IDF/components/esp_wifi/include/local -IE:/Application/ESP-IDF/components/esp_wifi/wifi_apps/include -IE:/Application/ESP-IDF/components/esp_wifi/wifi_apps/nan_app/include -IE:/Application/ESP-IDF/components/esp_event/include -IE:/Application/ESP-IDF/components/esp_phy/include -IE:/Application/ESP-IDF/components/esp_phy/esp32c5/include -IE:/Application/ESP-IDF/components/esp_netif/include -IE:/Application/ESP-IDF/components/nvs_flash/include -IE:/Application/ESP-IDF/components/esp_partition/include -IE:/Application/ESP-IDF/components/esp_timer/include -march=rv32imac_zicsr_zifencei  -fdiagnostics-color=always -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv=. -fmacro-prefix-map=E:/Application/ESP-IDF=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\app_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj -c E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:105:1: error: expected ',' or ';' before 'static'
+  105 | static const char *TAG = "csi_recv";
+      | ^~~~~~
+In file included from E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:44:
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'wifi_init':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:191:14: error: 'TAG' undeclared (first use in this function)
+  191 |     ESP_LOGI(TAG, "wifi_init finished.");
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:191:5: note: in expansion of macro 'ESP_LOGI'
+  191 |     ESP_LOGI(TAG, "wifi_init finished.");
+      |     ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:191:14: note: each undeclared identifier is reported only once for each function it appears in
+  191 |     ESP_LOGI(TAG, "wifi_init finished.");
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:191:5: note: in expansion of macro 'ESP_LOGI'
+  191 |     ESP_LOGI(TAG, "wifi_init finished.");
+      |     ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'wifi_event_handler':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:199:18: error: 'TAG' undeclared (first use in this function)
+  199 |         ESP_LOGI(TAG, "Trying to connect to AP...");
+      |                  ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:199:9: note: in expansion of macro 'ESP_LOGI'
+  199 |         ESP_LOGI(TAG, "Trying to connect to AP...");
+      |         ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'wifi_esp_now_init':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:231:14: error: 'TAG' undeclared (first use in this function)
+  231 |     ESP_LOGI(TAG, "================ ESP NOW Ready ================");
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:231:5: note: in expansion of macro 'ESP_LOGI'
+  231 |     ESP_LOGI(TAG, "================ ESP NOW Ready ================");
+      |     ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'wifi_csi_rx_cb':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:240:14: error: 'TAG' undeclared (first use in this function)
+  240 |     ESP_LOGI(TAG, "CSI callback triggered");
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:240:5: note: in expansion of macro 'ESP_LOGI'
+  240 |     ESP_LOGI(TAG, "CSI callback triggered");
+      |     ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'csi_process':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:318:14: error: 'TAG' undeclared (first use in this function)
+  318 |     ESP_LOGI(TAG, "CSI Buffer Status: %d samples stored", CSI_Q_INDEX);
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:318:5: note: in expansion of macro 'ESP_LOGI'
+  318 |     ESP_LOGI(TAG, "CSI Buffer Status: %d samples stored", CSI_Q_INDEX);
+      |     ^~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c: In function 'app_main':
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:390:14: error: 'TAG' undeclared (first use in this function)
+  390 |     ESP_LOGI(TAG, "Device MAC Address: " MACSTR, MAC2STR(mac));
+      |              ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:182:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+E:/Application/ESP-IDF/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/main/app_main.c:390:5: note: in expansion of macro 'ESP_LOGI'
+  390 |     ESP_LOGI(TAG, "Device MAC Address: " MACSTR, MAC2STR(mac));
+      |     ^~~~~~~~
+[4/9] Completed 'bootloader'
+ninja: build stopped: subcommand failed.

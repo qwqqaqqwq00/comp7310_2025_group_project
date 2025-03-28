@@ -1,0 +1,17 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\_MyWork\2025-2025\hku\COMP7310-AIoT\comp7310_2025_group_project\esp32c5\csi_recv\build\bootloader\esp-idf\esptool_py && E:\Application\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/Application/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x2000 E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/bootloader/bootloader.bin"
+Bootloader binary size 0x53c0 bytes. 0xc40 bytes (13%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+[4/9] Completed 'bootloader'
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable csi_recv.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32c5 image...
+Merged 1 ELF section
+Successfully created esp32c5 image.
+Generated E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/csi_recv.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\_MyWork\2025-2025\hku\COMP7310-AIoT\comp7310_2025_group_project\esp32c5\csi_recv\build\esp-idf\esptool_py && E:\Application\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/Application/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/partition_table/partition-table.bin E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi_recv/build/csi_recv.bin"
+csi_recv.bin binary size 0xb7d40 bytes. Smallest app partition is 0x100000 bytes. 0x482c0 bytes (28%) free.

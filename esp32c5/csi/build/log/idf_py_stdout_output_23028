@@ -1,0 +1,66 @@
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\_MyWork\2025-2025\hku\COMP7310-AIoT\comp7310_2025_group_project\esp32c5\csi\build\esp-idf\esptool_py && E:\Application\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/Application/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/partition_table/partition-table.bin E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/espnow_example.bin"
+espnow_example.bin binary size 0xa1a10 bytes. Smallest app partition is 0x100000 bytes. 0x5e5f0 bytes (37%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\_MyWork\2025-2025\hku\COMP7310-AIoT\comp7310_2025_group_project\esp32c5\csi\build\bootloader\esp-idf\esptool_py && E:\Application\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/Application/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x2000 E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build/bootloader/bootloader.bin"
+Bootloader binary size 0x53c0 bytes. 0xc40 bytes (13%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\Application\ESP-IDF\components\esptool_py && E:\Application\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=E:/Application/ESP-IDF -D SERIAL_TOOL=E:/Application/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;E:/Application/ESP-IDF/components/esptool_py/esptool/esptool.py;--chip;esp32c5 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/build -P E:/Application/ESP-IDF/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c5 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x2000 bootloader/bootloader.bin 0x10000 espnow_example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM5
+Connecting....
+WARNING: This chip doesn't appear to be a ESP32-C5 (chip magic value 0x63e1406f). Probably it is unsupported by this version of esptool.
+Chip is ESP32-C5 (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 48MHz
+MAC: 60:55:f9:ff:fe:fc:c5:24
+BASE MAC: 60:55:f9:fc:c5:24
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00002000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000b1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21440 bytes to 13068...
+Writing at 0x00002000... (100 %)
+Wrote 21440 bytes (13068 compressed) at 0x00002000 in 0.5 seconds (effective 350.7 kbit/s)...
+Hash of data verified.
+Compressed 662032 bytes to 388213...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001b75f... (8 %)
+Writing at 0x00024412... (12 %)
+Writing at 0x0002b376... (16 %)
+Writing at 0x000322bd... (20 %)
+Writing at 0x000399fd... (25 %)
+Writing at 0x000415aa... (29 %)
+Writing at 0x00047ead... (33 %)
+Writing at 0x0004e49c... (37 %)
+Writing at 0x00054cf9... (41 %)
+Writing at 0x0005b6c5... (45 %)
+Writing at 0x0006162a... (50 %)
+Writing at 0x00067883... (54 %)
+Writing at 0x0006dec9... (58 %)
+Writing at 0x00073bf8... (62 %)
+Writing at 0x00079924... (66 %)
+Writing at 0x0007f93b... (70 %)
+Writing at 0x0008587a... (75 %)
+Writing at 0x0008c37d... (79 %)
+Writing at 0x000924b5... (83 %)
+Writing at 0x000988ae... (87 %)
+Writing at 0x0009ed67... (91 %)
+Writing at 0x000a52c7... (95 %)
+Writing at 0x000ab5be... (100 %)
+Wrote 662032 bytes (388213 compressed) at 0x00010000 in 9.7 seconds (effective 547.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 269.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

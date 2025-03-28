@@ -1,0 +1,572 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpzo409wb5"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpzo409wb5': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpi2x96hpg"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpi2x96hpg': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp1gwgc3cb"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp1gwgc3cb': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp3hk8tu9z"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp3hk8tu9z': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp0amx3mzs"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp0amx3mzs': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpwi__vuv1"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpwi__vuv1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpf5m6mii7"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpf5m6mii7': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp23f_lxdz"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp23f_lxdz': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpcz5k06s2"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpcz5k06s2': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp7js72eg6"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp7js72eg6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpmbn4hrfx"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpmbn4hrfx': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpv1j3qat8"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpv1j3qat8': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp96ho2_2e"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp96ho2_2e': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpzwumwo4z"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpzwumwo4z': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpdu2m14py"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpdu2m14py': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpnlek24zi"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpnlek24zi': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmphd_awcbo"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmphd_awcbo': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpqcccncdb"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpqcccncdb': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp2jifxw1v"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp2jifxw1v': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmplnqolhex"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmplnqolhex': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp2eidh0rq"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp2eidh0rq': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp22u0_a4t"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp22u0_a4t': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpw2sjikk0"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpw2sjikk0': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpb3vgaw89"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpb3vgaw89': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpiahgzy58"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpiahgzy58': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpn7y6_dli"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpn7y6_dli': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpqh7u071y"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpqh7u071y': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp1rdujqi1"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp1rdujqi1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpn3r0n4zi"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpn3r0n4zi': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpezcb583r"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpezcb583r': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpihyt2p6o"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpihyt2p6o': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp_x5w1bwy"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp_x5w1bwy': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp4mvyq2sh"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmp4mvyq2sh': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0;33m--- 0x4200c248: wifi_init at E:/_MyWork/2025-2025/hku/COMP7310-AIoT/comp7310_2025_group_project/esp32c5/csi/main/espnow_example_main.c:43 (discriminator 1)
+[0m
+[0;33m--- 0x40806d81: _esp_error_check_failed at E:/Application/ESP-IDF/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080087a: panic_abort at E:/Application/ESP-IDF/components/esp_system/panic.c:468
+0x40806d8c: __ubsan_include at E:/Application/ESP-IDF/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800003: _vector_table at ??:?
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\_MyWork\\2025-2025\\hku\\COMP7310-AIoT\\comp7310_2025_group_project\\esp32c5\\csi\\build\\espnow_example.elf', '-ex', 'target remote | "E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c5 "C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpcooe9bvq"', '-ex', 'bt']' returned non-zero exit status 1.
+b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'E:\\Application\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c5 C:\\Users\\qwq\\AppData\\Local\\Temp\\tmpcooe9bvq': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40800866: esp_restart_noos at E:/Application/ESP-IDF/components/esp_system/port/soc/esp32c5/system_internal.c:118
+[0m
+[0m
+Traceback (most recent call last):
+  File "E:\Application\ESP-IDF\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
