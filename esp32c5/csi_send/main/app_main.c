@@ -93,29 +93,6 @@ static void wifi_esp_now_init(esp_now_peer_info_t peer)
     ESP_ERROR_CHECK(esp_now_set_peer_rate_config(peer.peer_addr,&rate_config));
 }
 
-// void read_benchmark(const char *file_name){
-//     FILE *fp = fopen(file_name, "r");
-//     file = fopen("data.csv", "r");
-//     if (file == NULL) {
-//         perror("Unable to open file");
-//         return;
-//     }
-
-//     // 读取文件的每一行
-//     while (fgets(line, sizeof(line), file)) {
-//         // 移除行末的换行符
-//         line[strcspn(line, "\n")] = 0;
-//         parse_csv_line(line);
-//     }
-
-//     // 关闭文件
-//     fclose(file);
-// }
-
-static void send(){
-
-}
-
 void app_main()
 {
     /**
@@ -158,7 +135,6 @@ void app_main()
                 TEAM_MEMBER[0], TEAM_MEMBER[1], TEAM_MEMBER[2], TEAM_MEMBER[3],
                 TEAM_UID[0], TEAM_UID[1], TEAM_UID[2], TEAM_UID[3]);
     ESP_LOGI(TAG, "================ END OF GROUP INFO ================");
-    
     
     // END OF YOUR CODE
 
