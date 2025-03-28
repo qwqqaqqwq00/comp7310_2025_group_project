@@ -2,3 +2,6 @@
 /group_project.pdf
 /group_project_2025.md
 /latex_template
+/esp32c5/csi/build
+/esp32c5/csi_send/build
+/esp32c5/csi_recv/build
