@@ -34,7 +34,8 @@
  * Have fun building!
  */
 
-
+#include "NeuralNetwork.h"
+#include "selected_data.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -53,8 +54,10 @@
 static int16_t CSI_Q[CSI_BUFFER_LENGTH];
 static int CSI_Q_INDEX = 0; // CSI Buffer Index
 // Enable/Disable CSI Buffering. 1: Enable, using buffer, 0: Disable, using serial output
-static bool CSI_Q_ENABLE = 0; 
+static bool CSI_Q_ENABLE = 1; 
 static void csi_process(const int8_t *csi_data, int length);
+
+NeuralNetwork *nn = new NeuralNetwork();
 // [1] END OF YOUR CODE
 
 
@@ -66,9 +69,17 @@ bool motion_detection() {
     return false; // Placeholder
 }
 
-int breathing_rate_estimation() {
+int breathing_rate_estimation(const int8_t *csi_data, int length) {
     // TODO: Implement breathing rate estimation using CSI data in CSI_Q
-    return 0; // Placeholder
+    float *inputBuffer = nn->getInputBuffer();
+    for(int i = 0; i < length; i++){
+        inputBuffer[i] = (float)csi_data[i];
+    }
+    nn->predict();
+
+    float *outputBuffer = nn->getOutputBuffer();
+    float bpm = outputBuffer[0];
+    return (int)bpm; // Placeholder
 }
 
 void mqtt_send() {
@@ -87,7 +98,7 @@ void mqtt_send() {
 #define CONFIG_WIFI_5G_PROTOCOL             WIFI_PROTOCOL_11N
 #define CONFIG_ESP_NOW_PHYMODE           WIFI_PHY_MODE_HT20
 #define CONFIG_ESP_NOW_RATE             WIFI_PHY_RATE_MCS0_LGI
-#define CONFIG_FORCE_GAIN                   1
+#define CONFIG_FORCE_GAIN                   0
 #define CONFIG_GAIN_CONTROL                 CONFIG_FORCE_GAIN
 
 // UPDATE: Define parameters for scan method
@@ -169,20 +180,42 @@ static void wifi_init()
     
     // [3] YOUR CODE HERE
     // You need to modify the ssid and password to match your Wi-Fi network.
+    // wifi_config_t wifi_config = {
+    //     .sta = {
+    //         .ssid = "Wi-Fi.HK via HKU",
+    //         .password = "",
+    //         .threshold.authmode = WIFI_AUTH_OPEN,
+    //         // UPDATES: only use this scan method when you want to connect your mobile phone's hotpot
+    //         .scan_method = DEFAULT_SCAN_METHOD,
+    //         //
+        
+    //         .pmf_cfg = {
+    //             .capable = true,
+    //             .required = false
+    //         },
+    //     },
+    // };
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "1703_5G",         
-            .password = "92178750",
-            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
-            // UPDATES: only use this scan method when you want to connect your mobile phone's hotpot
+            .ssid = "Wi-Fi.HK via HKU",
+            .password = "",
             .scan_method = DEFAULT_SCAN_METHOD,
-            //
-        
+            .bssid_set = false,
+            .bssid = {0},
+            .channel = 0,
+            .listen_interval = 0,
+            .sort_method = WIFI_CONNECT_AP_BY_SIGNAL,
+            .threshold =  {
+                .rssi = 0,
+                .authmode = WIFI_AUTH_OPEN,
+                .rssi_5g_adjustment = 0
+            },
             .pmf_cfg = {
                 .capable = true,
                 .required = false
-            },
-        },
+            }
+        }
+
     };
     // [3] END OF YOUR CODE
 
@@ -335,8 +368,10 @@ static void csi_process(const int8_t *csi_data, int length)
     // 2. Call your algorithm functions here, e.g.: motion_detection(), breathing_rate_estimation(), and mqtt_send()
     // If you implement the algorithm on-board, you can return the results to the host, else send the CSI data.
     // motion_detection();
-    // breathing_rate_estimation();
+    int bpm = breathing_rate_estimation(csi_data, length);
     // mqtt_send();
+
+    ESP_LOGI(TAG, "BPM: %d", bpm);
     // [4] END YOUR CODE HERE
 }
 
@@ -367,7 +402,7 @@ static void wifi_csi_init()
 }
 
 //------------------------------------------------------Main Function------------------------------------------------------
-void app_main()
+extern "C" void app_main(void)
 {
     /**
      * @brief Initialize NVS
@@ -413,11 +448,19 @@ void app_main()
      */
 
     if (wifi_connected) {
+        // esp_now_peer_info_t peer = {
+        //     .channel   = CONFIG_LESS_INTERFERENCE_CHANNEL,
+        //     .ifidx     = WIFI_IF_STA,
+        //     .encrypt   = false,
+        //     .peer_addr = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff},
+        // };
         esp_now_peer_info_t peer = {
-            .channel   = CONFIG_LESS_INTERFERENCE_CHANNEL,
-            .ifidx     = WIFI_IF_STA,
-            .encrypt   = false,
-            .peer_addr = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff},
+            .peer_addr = {0x7c, 0x94, 0x9f, 0x7c, 0x32, 0xfc}, // Sender MAC
+            .lmk = {0},
+            .channel = CONFIG_LESS_INTERFERENCE_CHANNEL,
+            .ifidx = WIFI_IF_STA,
+            .encrypt = false,
+            .priv = NULL
         };
 
         wifi_esp_now_init(peer); // Initialize ESP-NOW Communication
