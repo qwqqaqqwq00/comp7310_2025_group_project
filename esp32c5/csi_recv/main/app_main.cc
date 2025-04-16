@@ -35,7 +35,7 @@
  */
 
 #include "NeuralNetwork.h"
-#include "selected_data.h"
+#include "sel.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -51,13 +51,14 @@
 // [1] YOUR CODE HERE
 #define CSI_BUFFER_LENGTH 800
 #define CSI_FIFO_LENGTH 100
+static const char *TAG = "csi_recv";
 static int16_t CSI_Q[CSI_BUFFER_LENGTH];
 static int CSI_Q_INDEX = 0; // CSI Buffer Index
 // Enable/Disable CSI Buffering. 1: Enable, using buffer, 0: Disable, using serial output
-static bool CSI_Q_ENABLE = 1; 
+static bool CSI_Q_ENABLE = 0; 
+static NeuralNetwork *nn = new NeuralNetwork();
 static void csi_process(const int8_t *csi_data, int length);
 
-NeuralNetwork *nn = new NeuralNetwork();
 // [1] END OF YOUR CODE
 
 
@@ -71,14 +72,20 @@ bool motion_detection() {
 
 int breathing_rate_estimation(const int8_t *csi_data, int length) {
     // TODO: Implement breathing rate estimation using CSI data in CSI_Q
+    float bpm = 0;
     float *inputBuffer = nn->getInputBuffer();
-    for(int i = 0; i < length; i++){
+    // length = (length<=234)?length:234;
+    // for(int i = 0; i < length; i++){
+    //     inputBuffer[i] = (float)csi_data[i];
+    // }
+    for(int i=0;i<FEATURE_SIZE;i++){
         inputBuffer[i] = (float)csi_data[i];
     }
-    nn->predict();
+    ESP_LOGI(TAG, "Sample feature inputs: %f, %f, %f, %f, %f, %f", inputBuffer[0], inputBuffer[1], inputBuffer[2], inputBuffer[3], inputBuffer[4], inputBuffer[5]);
 
-    float *outputBuffer = nn->getOutputBuffer();
-    float bpm = outputBuffer[0];
+    bpm = nn->predict();
+    
+    ESP_LOGI(TAG, "%d,%f", length, bpm);
     return (int)bpm; // Placeholder
 }
 
@@ -90,7 +97,7 @@ void mqtt_send() {
 // [2] END OF YOUR CODE
 
 
-#define CONFIG_LESS_INTERFERENCE_CHANNEL   40
+#define CONFIG_LESS_INTERFERENCE_CHANNEL   0
 #define CONFIG_WIFI_BAND_MODE   WIFI_BAND_MODE_5G_ONLY
 #define CONFIG_WIFI_2G_BANDWIDTHS           WIFI_BW_HT20
 #define CONFIG_WIFI_5G_BANDWIDTHS           WIFI_BW_HT20
@@ -111,9 +118,8 @@ void mqtt_send() {
 #endif /*CONFIG_EXAMPLE_SCAN_METHOD*/
 //
 
-// static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x1a, 0x00, 0x00, 0x00, 0x00, 0x00};
-static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x7c, 0x94, 0x9f, 0x7c, 0x32, 0xfc};
-static const char *TAG = "csi_recv";
+// static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x7c, 0x94, 0x9f, 0x7c, 0x32, 0xfc};
+static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x60, 0x55, 0xf9, 0xfc, 0xc5, 0x24};
 typedef struct
 {
     unsigned : 32; /**< reserved */
@@ -197,7 +203,7 @@ static void wifi_init()
     // };
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "Wi-Fi.HK via HKU",
+            .ssid = "CSL",
             .password = "",
             .scan_method = DEFAULT_SCAN_METHOD,
             .bssid_set = false,
@@ -407,6 +413,12 @@ extern "C" void app_main(void)
     /**
      * @brief Initialize NVS
      */
+    NeuralNetwork *nn = new NeuralNetwork();
+    if (nn == nullptr) {
+        ESP_LOGE(TAG, "Failed to allocate NeuralNetwork object");
+        return;
+    }
+    // float *buf = nn->getInputBuffer();
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -455,7 +467,8 @@ extern "C" void app_main(void)
         //     .peer_addr = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff},
         // };
         esp_now_peer_info_t peer = {
-            .peer_addr = {0x7c, 0x94, 0x9f, 0x7c, 0x32, 0xfc}, // Sender MAC
+            // .peer_addr = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff}, // Sender MAC
+            .peer_addr = {0x60, 0x55, 0xf9, 0xfc, 0xc5, 0x24},
             .lmk = {0},
             .channel = CONFIG_LESS_INTERFERENCE_CHANNEL,
             .ifidx = WIFI_IF_STA,

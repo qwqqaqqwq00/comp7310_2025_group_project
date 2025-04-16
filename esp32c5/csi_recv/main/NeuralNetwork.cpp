@@ -37,6 +37,8 @@ NeuralNetwork::NeuralNetwork() {
         TF_LITE_REPORT_ERROR(error_reporter, "Could not allocate arena");
         return;
     }
+    TF_LITE_REPORT_ERROR(error_reporter, "Allocated arena of %d bytes", kArenaSize);
+
 
     interpreter = new tflite::MicroInterpreter(model, *resolver, tensor_arena, kArenaSize);
     TfLiteStatus allocate_status = interpreter->AllocateTensors();
@@ -53,6 +55,10 @@ NeuralNetwork::NeuralNetwork() {
 }
 
 float *NeuralNetwork::getInputBuffer() {
+    if (input == nullptr) {
+        TF_LITE_REPORT_ERROR(error_reporter, "Input tensor is null");
+        return nullptr;
+    }
     return input->data.f;
 }
 
