@@ -46,18 +46,33 @@
 #include "esp_wifi.h"
 #include "esp_netif.h"
 #include "esp_now.h"
+#include "esp_task_wdt.h"
+#include "mqtt_client.h"
 
 
 // [1] YOUR CODE HERE
 #define CSI_BUFFER_LENGTH 800
 #define CSI_FIFO_LENGTH 100
+#define CSI_SEND_LENGTH 234
 static const char *TAG = "csi_recv";
 static int16_t CSI_Q[CSI_BUFFER_LENGTH];
 static int CSI_Q_INDEX = 0; // CSI Buffer Index
 // Enable/Disable CSI Buffering. 1: Enable, using buffer, 0: Disable, using serial output
-static bool CSI_Q_ENABLE = 0; 
+static bool CSI_Q_ENABLE = 1; 
 static NeuralNetwork *nn = new NeuralNetwork();
 static void csi_process(const int8_t *csi_data, int length);
+esp_mqtt_client_handle_t client;
+bool MQTT_CONNECT=false;
+// MQTT代理地址和主题
+#define MQTT_URI "mqtt://192.168.63.115:1883"  // 正确的MQTT URI格式mqtt://192.168.31.172:1883   192.168.76.160
+const char* TOPIC="MQTT/CSI";
+// MQTT 客户端配置
+// esp_mqtt_client_config_t mqtt_cfg = {
+//     .broker.address.uri = MQTT_URI,  // 设置 MQTT 代理的 URI 地址
+//     .credentials.username = "admin",
+//     .credentials.authentication.password="123456"
+// };
+esp_mqtt_client_config_t mqtt_cfg;
 
 // [1] END OF YOUR CODE
 
@@ -78,6 +93,7 @@ int breathing_rate_estimation(const int8_t *csi_data, int length) {
     // for(int i = 0; i < length; i++){
     //     inputBuffer[i] = (float)csi_data[i];
     // }
+    // int startIndex = (length-FEATURE_SIZE>0)?length-FEATURE_SIZE:0;
     for(int i=0;i<FEATURE_SIZE;i++){
         inputBuffer[i] = (float)csi_data[i];
     }
@@ -89,6 +105,109 @@ int breathing_rate_estimation(const int8_t *csi_data, int length) {
     return (int)bpm; // Placeholder
 }
 
+void mqtt_event_handler(void *handler_args, const char* base, long int event_id, void *event_data)
+{
+    esp_mqtt_event_handle_t event = (esp_mqtt_event_handle_t) event_data;
+    esp_mqtt_client_handle_t client = event->client;
+    int msg_id;
+    switch ((esp_mqtt_event_id_t)event_id) {
+        case MQTT_EVENT_CONNECTED:
+            ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
+            msg_id = esp_mqtt_client_subscribe(client, "/topic/qos0", 0);
+
+            msg_id = esp_mqtt_client_subscribe(client, "/topic/qos1", 1);
+
+            msg_id = esp_mqtt_client_unsubscribe(client, "/topic/qos1");
+            break;
+        case MQTT_EVENT_DISCONNECTED:
+            ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
+            break;
+
+        case MQTT_EVENT_SUBSCRIBED:
+            msg_id = esp_mqtt_client_publish(client, "/topic/qos0", "data", 0, 0, 0);
+            break;
+        case MQTT_EVENT_UNSUBSCRIBED:
+            break;
+        case MQTT_EVENT_PUBLISHED:
+            break;
+        case MQTT_EVENT_DATA:
+            ESP_LOGI(TAG, "MQTT_EVENT_DATA");
+            break;
+        case MQTT_EVENT_ERROR:
+            ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
+            break;
+        default:
+            break;
+    }
+}
+
+static void mqtt_app_start(void)
+{
+    mqtt_cfg.broker.address.uri = MQTT_URI;
+    mqtt_cfg.credentials.username = "admin";
+    mqtt_cfg.credentials.authentication.password = "123456";
+    ESP_LOGI(TAG, "[APP] Free memory: %" PRIu32 " bytes", esp_get_free_heap_size());
+    client = esp_mqtt_client_init(&mqtt_cfg);
+    /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
+    esp_mqtt_client_register_event(client, MQTT_EVENT_ANY, mqtt_event_handler, NULL);
+    esp_mqtt_client_start(client);
+}
+
+void mqtt_send_message(const char *topic) {
+    ESP_LOGI("MQTT","mqtt_send_message");
+    
+    if (client ) {
+        
+        if (!MQTT_CONNECT) {
+            ESP_LOGW("MQTT", "Client not connected. Attempting to reconnect...");
+            esp_mqtt_client_reconnect(client);  // 重新连接
+        }
+        // 计算发送字符串的最大长度：每个 int16_t 数字最大 6 个字符（如："-32768"），加上逗号和方括号
+        int message_length =  CSI_SEND_LENGTH* 6 + 2 + CSI_SEND_LENGTH - 1;  // [1,23,3,4,5] -> 2 for [] and (length-1) for commas
+        int send_index=0;
+        int remain_length=CSI_Q_INDEX;
+        while(remain_length >= CSI_SEND_LENGTH ){
+            // 创建一个缓冲区来存储最终的字符串
+            char message_buffer[message_length + 1];  // +1 是为了留出空间放置 \0
+                // 开始构造字符串
+            message_buffer[0] = '[';  // 开始的方括号
+            int offset = 1;
+
+            // 将 int16_t 数组转换为字符串
+            for (int i = send_index; i < send_index+CSI_SEND_LENGTH; i++) {
+                offset += snprintf(message_buffer + offset, 6, "%d", CSI_Q[i]);
+
+                // 如果不是最后一个元素，添加逗号
+                if (i < send_index+CSI_SEND_LENGTH - 1) {
+                    message_buffer[offset++] = ',';
+                }
+            }
+            send_index+=CSI_SEND_LENGTH;
+            remain_length-=CSI_SEND_LENGTH;
+
+            message_buffer[offset++] = ']';  // 结束的方括号
+            message_buffer[offset] = '\0';  // 字符串结尾
+
+            // 发布消息
+            int res=esp_mqtt_client_publish(client, topic, message_buffer, 0, 0, 0);  // 中间是 QoS
+            if(res==-1){
+                ESP_LOGW("MQTT", "Client not connected,reconnect client...");
+                esp_mqtt_client_reconnect(client); 
+                vTaskDelay(5000 / portTICK_PERIOD_MS);  // 将 300 毫秒转换为 FreeRTOS tick
+            }
+
+            vTaskDelay(5000 / portTICK_PERIOD_MS);  // 将 300 毫秒转换为 FreeRTOS tick
+
+            ESP_LOGI("MQTT", "Message published to topic: %s", topic);
+        }
+        memmove(CSI_Q, CSI_Q + send_index, remain_length * sizeof(int16_t));
+        CSI_Q_INDEX = remain_length;
+    }else {
+        ESP_LOGW("MQTT", "MQTT client is not connected. Cannot send message.");
+    }
+}
+
+
 void mqtt_send() {
     // TODO: Implement MQTT message sending using CSI data or Results
     // NOTE: If you implement the algorithm on-board, you can return the results to the host, else send the CSI data.
@@ -97,7 +216,7 @@ void mqtt_send() {
 // [2] END OF YOUR CODE
 
 
-#define CONFIG_LESS_INTERFERENCE_CHANNEL   0
+#define CONFIG_LESS_INTERFERENCE_CHANNEL   40
 #define CONFIG_WIFI_BAND_MODE   WIFI_BAND_MODE_5G_ONLY
 #define CONFIG_WIFI_2G_BANDWIDTHS           WIFI_BW_HT20
 #define CONFIG_WIFI_5G_BANDWIDTHS           WIFI_BW_HT20
@@ -203,8 +322,8 @@ static void wifi_init()
     // };
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "CSL",
-            .password = "",
+            .ssid = "Never settle",
+            .password = "1234567890",
             .scan_method = DEFAULT_SCAN_METHOD,
             .bssid_set = false,
             .bssid = {0},
@@ -213,7 +332,7 @@ static void wifi_init()
             .sort_method = WIFI_CONNECT_AP_BY_SIGNAL,
             .threshold =  {
                 .rssi = 0,
-                .authmode = WIFI_AUTH_OPEN,
+                .authmode = WIFI_AUTH_WPA2_PSK,
                 .rssi_5g_adjustment = 0
             },
             .pmf_cfg = {
@@ -361,6 +480,7 @@ static void csi_process(const int8_t *csi_data, int length)
     }
 
     // [4] YOUR CODE HERE
+    mqtt_send_message(TOPIC);
 
     // 1. Fill the information of your group members
     ESP_LOGI(TAG, "================ GROUP INFO ================");
