@@ -29,7 +29,7 @@ public:
     // Returns a pointer to the output buffer (float array)
     float *getOutputBuffer();
 
-    NeuralNetwork();
+    NeuralNetwork(bool motion);
     // Runs inference (output is read via getOutputBuffer)
     float predict();
 };

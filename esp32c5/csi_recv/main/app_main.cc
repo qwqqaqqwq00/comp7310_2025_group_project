@@ -39,6 +39,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 #include "nvs_flash.h"
 #include "esp_mac.h"
 #include "rom/ets_sys.h"
@@ -59,7 +60,8 @@ static int16_t CSI_Q[CSI_BUFFER_LENGTH];
 static int CSI_Q_INDEX = 0; // CSI Buffer Index
 // Enable/Disable CSI Buffering. 1: Enable, using buffer, 0: Disable, using serial output
 static bool CSI_Q_ENABLE = 1; 
-static NeuralNetwork *nn = new NeuralNetwork();
+static NeuralNetwork *nn = new NeuralNetwork(false);
+static NeuralNetwork *nn_motion = new NeuralNetwork(true);
 static void csi_process(const int8_t *csi_data, int length);
 esp_mqtt_client_handle_t client;
 bool MQTT_CONNECT=false;
@@ -82,18 +84,23 @@ esp_mqtt_client_config_t mqtt_cfg;
 // NOTE: Please do not change the function names and return types.
 bool motion_detection() {
     // TODO: Implement motion detection logic using CSI data in CSI_Q
-    return false; // Placeholder
+    float *inputBuffer = nn->getInputBuffer();
+    for(int i=0;i<FEATURE_SIZE;i++){
+        inputBuffer[i] = (float)csi_data[i];
+    }
+    ESP_LOGI(TAG, "Sample feature inputs: %f, %f, %f, %f, %f, %f", inputBuffer[0], inputBuffer[1], inputBuffer[2], inputBuffer[3], inputBuffer[4], inputBuffer[5]);
+
+    nn->predict();
+
+    float *outputBuffer = nn->getOutputBuffer();
+
+    return outputBuffer[0]<outputBuffer[1]; // Placeholder
 }
 
 int breathing_rate_estimation(const int8_t *csi_data, int length) {
     // TODO: Implement breathing rate estimation using CSI data in CSI_Q
     float bpm = 0;
     float *inputBuffer = nn->getInputBuffer();
-    // length = (length<=234)?length:234;
-    // for(int i = 0; i < length; i++){
-    //     inputBuffer[i] = (float)csi_data[i];
-    // }
-    // int startIndex = (length-FEATURE_SIZE>0)?length-FEATURE_SIZE:0;
     for(int i=0;i<FEATURE_SIZE;i++){
         inputBuffer[i] = (float)csi_data[i];
     }
@@ -533,7 +540,8 @@ extern "C" void app_main(void)
     /**
      * @brief Initialize NVS
      */
-    NeuralNetwork *nn = new NeuralNetwork();
+    nn = new NeuralNetwork(false);
+    nn_motion = new NeuralNetwork(true);
     if (nn == nullptr) {
         ESP_LOGE(TAG, "Failed to allocate NeuralNetwork object");
         return;

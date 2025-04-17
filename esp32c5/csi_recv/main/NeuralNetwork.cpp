@@ -1,5 +1,6 @@
 #include "NeuralNetwork.h"
 #include "model_data.h"
+#include "model_motion.h"
 #include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
 #include "tensorflow/lite/micro/tflite_bridge/micro_error_reporter.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
@@ -9,11 +10,14 @@
 
 const int kArenaSize = 20000;
 
-NeuralNetwork::NeuralNetwork() {
+NeuralNetwork::NeuralNetwork(bool motion) {
     error_reporter = new tflite::MicroErrorReporter();
 
     // Load the TFLite model from model_data.h
-    model = tflite::GetModel(br_model_tflite);
+    if(!motion)
+        model = tflite::GetModel(br_model_tflite);
+    else
+        model = tflite::GetModel(motion_model_tflite);
     
     if (model->version() != TFLITE_SCHEMA_VERSION) {
         TF_LITE_REPORT_ERROR(error_reporter, "Model provided is schema version %d not equal to supported version %d.",
